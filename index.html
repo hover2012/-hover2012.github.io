@@ -262,6 +262,296 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.wangwanfei.club/2021/06/15/%E6%B5%81%E9%87%8F%E8%B0%83%E5%BA%A6%E5%92%8C%E7%BC%96%E6%8E%92%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="棒棒最棒">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/15/%E6%B5%81%E9%87%8F%E8%B0%83%E5%BA%A6%E5%92%8C%E7%BC%96%E6%8E%92%E7%B3%BB%E7%BB%9F/" itemprop="url">流量调度和编排系统</a></h1>
+        
+
+        <div class="post-meta">
+
+        
+        <span class="post-meta-item">
+                      <span class="post-meta-item-icon">
+                        <i class="fa fa-user"></i>
+                      </span>
+                      <span class="post-meta-item-text">wwf</span>
+                    </span>
+        
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-15T17:09:02+08:00">
+                2021-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9E%B6%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">架构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="服务化管理"><a href="#服务化管理" class="headerlink" title="服务化管理"></a>服务化管理</h2><h4 id="服务协议"><a href="#服务协议" class="headerlink" title="服务协议"></a>服务协议</h4><ol>
+<li>HTTP/1.1</li>
+<li>HTTP/2</li>
+<li>HTTP/3(QUIC)</li>
+<li>MQTT</li>
+</ol>
+<h4 id="服务路由规则"><a href="#服务路由规则" class="headerlink" title="服务路由规则"></a>服务路由规则</h4><ul>
+<li>IP 过滤</li>
+<li>URL 地址路径匹配</li>
+<li>HTTP 请求头部信息匹配</li>
+<li>HTTP 请求动作过滤</li>
+</ul>
+<h4 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h4><ul>
+<li>​    内置Etcd</li>
+</ul>
+<h4 id="容错设计"><a href="#容错设计" class="headerlink" title="容错设计"></a>容错设计</h4><ul>
+<li>限流</li>
+<li>熔断</li>
+<li>重试</li>
+<li>超时</li>
+<li>服务降级</li>
+</ul>
+<h4 id="发布管理"><a href="#发布管理" class="headerlink" title="发布管理"></a>发布管理</h4><ul>
+<li>蓝绿发布（流量切换）</li>
+<li>灰度发布（流量调度）</li>
+</ul>
+<h4 id="API管理"><a href="#API管理" class="headerlink" title="API管理"></a>API管理</h4><ul>
+<li>后端多API聚合调用</li>
+<li>后端API流程编排</li>
+<li>Swagger/SDK/文档（需要后端支持Swagger）</li>
+</ul>
+<h4 id="安全相关"><a href="#安全相关" class="headerlink" title="安全相关"></a>安全相关</h4><ul>
+<li>用户 HTTPS 证书和私钥管理</li>
+<li>IP地址黑白名单</li>
+<li>API签名验证（HMAC）</li>
+<li>JWT Token 验证</li>
+<li>OAuth2 支持</li>
+<li>Let’s Encrpt证书自动化管理</li>
+</ul>
+<h4 id="插件化管理"><a href="#插件化管理" class="headerlink" title="插件化管理"></a>插件化管理</h4><ul>
+<li>新增、导入、编辑、查看、删除过滤插件</li>
+<li>插件组合 Pipeline 编排，进行流程控制</li>
+<li>用户可以定制插件，进行二次开发</li>
+</ul>
+<h4 id="Service-Mesh"><a href="#Service-Mesh" class="headerlink" title="Service Mesh"></a>Service Mesh</h4><ul>
+<li>Mesh Sidecar Ingress/Egress</li>
+<li>Mesh Service Registry（兼容 Eureka/Consul/Nacos）</li>
+<li>Mesh 限流/熔断/重试/超时</li>
+</ul>
+<h4 id="FaaS"><a href="#FaaS" class="headerlink" title="FaaS"></a>FaaS</h4><ul>
+<li>FaaS Function 以SideCar形式部署用户业务逻辑的docker 镜像, 自动伸缩Function实例个数。</li>
+<li>FaaS Function 事件订阅（队列，定时任务)</li>
+<li>FaaS Function 状态监控，资源消耗，延迟，请求量统计</li>
+</ul>
+<h4 id="第三方集成"><a href="#第三方集成" class="headerlink" title="第三方集成"></a>第三方集成</h4><ul>
+<li>Kubernetes Ingress Controller 集成</li>
+<li>Knative Serverless 集成</li>
+<li>Kafka 输出</li>
+<li>服务发现：Eureka, Consul, Etcd, Nacos</li>
+</ul>
+<h2 id="高性能可用"><a href="#高性能可用" class="headerlink" title="高性能可用"></a>高性能可用</h2><h4 id="高并发-流量处理"><a href="#高并发-流量处理" class="headerlink" title="高并发 流量处理"></a>高并发 流量处理</h4><ul>
+<li>秒杀 - 选择服务，秒杀活动号，秒杀活动场次号</li>
+<li>过滤 - 在设计用户定制服务时，可以定制过滤规则</li>
+<li>缓存 - 为每个服务针对性定制缓存数量</li>
+</ul>
+<h4 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h4><ul>
+<li>轮流分配</li>
+<li>随机分配</li>
+<li>按权随机分配</li>
+<li>IP 地址哈希</li>
+<li>HTTP 头部信息哈希</li>
+</ul>
+<h4 id="集群管理"><a href="#集群管理" class="headerlink" title="集群管理"></a>集群管理</h4><ul>
+<li>集群配置（配置名称，IP地址）</li>
+<li>集群自动化选主</li>
+<li>多集群配置，一键切换集群</li>
+</ul>
+<h4 id="热更新"><a href="#热更新" class="headerlink" title="热更新"></a>热更新</h4><ul>
+<li>程序不停机热更新</li>
+</ul>
+<h2 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h2><h4 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h4><ul>
+<li>命令行管理工具，提供配置更改、状态查询、排障支持等功能</li>
+</ul>
+<h4 id="管理API"><a href="#管理API" class="headerlink" title="管理API"></a>管理API</h4><ul>
+<li>对外提供RESTful API，可以进行二次开发，与用户其它系统进行集成，或者进行自动化管理和运维</li>
+</ul>
+<h4 id="调用链跟踪"><a href="#调用链跟踪" class="headerlink" title="调用链跟踪"></a>调用链跟踪</h4><ul>
+<li>OpenTracing</li>
+<li>OpenZipkin</li>
+</ul>
+<h4 id="全局监控"><a href="#全局监控" class="headerlink" title="全局监控"></a>全局监控</h4><ul>
+<li>节点名</li>
+<li>状态（健康，故障）</li>
+<li>节点角色信息 - Writer（Leader/Follower）, Reader</li>
+<li>IP 地址</li>
+<li>心跳时间</li>
+</ul>
+<h4 id="节点统计"><a href="#节点统计" class="headerlink" title="节点统计"></a>节点统计</h4><ul>
+<li>流量吞吐量 （TPS/m1, m5, m15）</li>
+<li>响应时间 （p50，p95，p99）</li>
+<li>请求/响应数据量 （字节数）</li>
+</ul>
+<h4 id="服务监控"><a href="#服务监控" class="headerlink" title="服务监控"></a>服务监控</h4><ul>
+<li>服务器吞吐量 （Server TPS/m1, m5, m15）</li>
+<li>后端吞吐量 （Backend TPS）</li>
+<li>服务器响应时间（p50，p95，p99）</li>
+<li>后端响应时间（p50，p95，p99）</li>
+<li>对服务按照各种指标进行排序</li>
+<li>服务器请求/响应数据量 （字节数）</li>
+<li>状态码分布</li>
+</ul>
+<h2 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h2><h4 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h4><ul>
+<li>集群管理</li>
+<li>服务及路由管理</li>
+<li>插件管理</li>
+<li>Pipeline 管理</li>
+<li>Controller 管理（服务发现、监控系统、FaaS等）</li>
+</ul>
+<h4 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h4><h4 id="发布管理-1"><a href="#发布管理-1" class="headerlink" title="发布管理"></a>发布管理</h4><ul>
+<li>蓝绿发布设定</li>
+<li>灰度发布设定</li>
+<li>变更预览与发布</li>
+<li>发布历史查询</li>
+<li>同步远程配置</li>
+</ul>
+<h4 id="可视化监控"><a href="#可视化监控" class="headerlink" title="可视化监控"></a>可视化监控</h4><ul>
+<li>接口维度吞吐量展示</li>
+<li>接口维度响应时间分布式展示</li>
+<li>接口维度的吞吐, 耗时,错误率等TopN排名展示</li>
+<li>接口维度的状态码分布</li>
+<li>接口维度请求/响应数据量统计</li>
+<li>Backend维度吞吐量展示</li>
+<li>Backend维度响应时间分布展示</li>
+<li>Backend维度的状态码分布</li>
+<li>集群节点维度吞吐量展示</li>
+<li>集群节点维度响应时间分布展示</li>
+<li>集群节点维度平均请求/响应数据量分布展示</li>
+</ul>
+<h4 id="日志保全"><a href="#日志保全" class="headerlink" title="日志保全"></a>日志保全</h4><p>对网关用户和服务的所有操作均保留日志，方便安全审计，证据留存，和历史记录备案查找</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.wangwanfei.club/2021/06/03/%E7%BE%8E%E5%A4%A7%E5%A4%AB%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1433,7 +1723,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1444,7 +1734,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1455,7 +1745,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
